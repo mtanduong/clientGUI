@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="444.0" prefWidth="488.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginController">
+   <children>
+      <Pane prefHeight="444.0" prefWidth="488.0" style="-fx-background-color: #262626;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="username" layoutX="126.0" layoutY="134.0" prefHeight="27.0" prefWidth="337.0" style="-fx-background-color: #dbdbdb; -fx-border-color: #DDDDDD;" styleClass="-fx-text-inner-color" />
+            <Text fill="#dbdbdb" layoutX="32.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account name" textAlignment="JUSTIFY" />
+            <Button layoutX="126.0" layoutY="228.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="23.0" prefWidth="163.0" style="-fx-background-color: #4b4b4b;" text="LOGIN" textFill="#d9d9d9" />
+            <Button layoutX="300.0" layoutY="228.0" mnemonicParsing="false" onAction="#cancelButtonClicked" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #4b4b4b;" text="CANCEL" textFill="#d9d9d9" />
+            <Text fill="#dbdbdb" layoutX="126.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UCI STEAM" wrappingWidth="143.490234375">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="64.0" fitWidth="85.0" layoutX="28.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:src/application/zotlogo.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="29.0" layoutY="279.0" prefHeight="0.0" prefWidth="431.0" />
+            <ChoiceBox fx:id="game" layoutX="126.0" layoutY="180.0" prefHeight="25.0" prefWidth="163.0" />
+            <Text fill="#dbdbdb" layoutX="79.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game" wrappingWidth="58.13671875" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
