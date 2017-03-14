@@ -45,7 +45,7 @@ public class loginController {
             stage.setScene(scene);
             
             stage.setTitle("UCI Steam Lobby");
-            stage.getIcons().add(new Image("file:src/applications/favicon.png"));
+            stage.getIcons().add(new Image("file:src/application/favicon.png"));
             //stage.setScene(new Scene(root1, 720, 480));  
             stage.show();
 		} catch(Exception e) {
