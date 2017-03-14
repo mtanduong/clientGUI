@@ -11,8 +11,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-//import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.*;
+import javafx.scene.text.Text;
 import javafx.scene.image.*;
 
 public class lobbyController {
@@ -21,6 +21,8 @@ public class lobbyController {
 	ObservableList<String> playerList = FXCollections.observableArrayList("Michael", "Edward", "Juno", "Huda", "Sam", "Dan", "Mike", "Jessica", "Andrew");
 	ObservableList<String> roomListNew = FXCollections.observableArrayList("Room1", "Room2", "Room3", "NewRoom", "MikeRoom");
 	ObservableList<String> playerListNew = FXCollections.observableArrayList("Michael", "Edward", "Juno", "Huda");
+	//User and game are the values taken from the login (account name & game chosen)
+	String user, game;
 	
 	@FXML
 	private Button backButton;
@@ -38,6 +40,15 @@ public class lobbyController {
 	private TextArea textArea;
 	
 	@FXML
+	private TextArea UserName;
+	
+	@FXML
+	private Text name;
+	
+	@FXML
+	private Text gameName;
+	
+	@FXML
 	private TextField profile;
 	
 	@FXML
@@ -48,11 +59,15 @@ public class lobbyController {
 	
 	@FXML
 	private void initialize() {
+		//Initializing lobby. Request specific lobby (ie checkers lobby, tictactoe lobby, etc) here
+		//Code here
+		//Fill room and player list with dummy lists
 		room.setItems(roomList);
 		player.setItems(playerList);
 	}
 	
 	public void backButtonClicked() {
+		//Closes the lobby
 		System.out.println("closing lobby");
 		Stage stage = (Stage) backButton.getScene().getWindow();
 		stage.close();
@@ -117,5 +132,14 @@ public class lobbyController {
 	
 	public void removeRoom(String room) {
 		roomList.remove(room);
+	}
+	
+	public void setUserGame(String currentUser, String currentGame) {
+		//Takes in the values from the login GUI (username and game chosen)
+		this.user = currentUser;
+		this.game = currentGame;
+		name.setText(currentUser);
+		gameName.setText(currentGame);
+		System.out.println("Lobby initialized with "+currentUser+" and "+currentGame);
 	}
 }

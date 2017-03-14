@@ -35,5 +35,8 @@
       <Separator layoutX="435.0" layoutY="161.0" prefHeight="3.0" prefWidth="268.0" />
       <Text fill="#dbdbdb" layoutX="552.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile" />
       <Text fill="#dbdbdb" layoutX="94.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" wrappingWidth="52.13671875" />
+      <Text fx:id="name" fill="#dbdbdb" layoutX="156.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="93.13671875" />
+      <Text fill="#dbdbdb" layoutX="256.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Game: " wrappingWidth="84.13671875" />
+      <Text fx:id="gameName" fill="#dbdbdb" layoutX="349.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
    </children>
 </AnchorPane>
