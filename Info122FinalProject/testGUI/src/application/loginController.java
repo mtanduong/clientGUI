@@ -37,9 +37,16 @@ public class loginController {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("lobbyGUI.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
+            
+            lobbyController lobby = fxmlLoader.<lobbyController>getController();
+            //Sends username and chosen game as string parameters into lobby so lobby can request that game type
+            lobby.setUserGame(user, pickedGame);
+            Scene scene = new Scene(root1);
+            stage.setScene(scene);
+            
             stage.setTitle("UCI Steam Lobby");
             stage.getIcons().add(new Image("file:src/applications/favicon.png"));
-            stage.setScene(new Scene(root1, 720, 480));  
+            //stage.setScene(new Scene(root1, 720, 480));  
             stage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
